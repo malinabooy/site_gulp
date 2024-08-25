@@ -1,0 +1,19 @@
+@forward 'colors';
+@forward 'media';
+@forward 'grid';
+@forward 'env';
+@forward 'helpers';
+
+// Настройка анимаций в проекте
+$duration: 200ms;
+$timing: linear;
+// ---
+
+// Унификация z-index значения по всему проекту
+$z-index-step: 5;
+$z-index-back: -1;
+
+$z-index-interactive: $z-index-step;
+$z-index-overlay: $z-index-step * 100;
+$z-index-modal: $z-index-overlay + $z-index-step;
+// ---

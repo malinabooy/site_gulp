@@ -1,0 +1,78 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.diagram-mobil {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  @media (width < vars.$media-768) {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 27px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  &__right {
+    @include mixins.Body-black-18;
+    color: var(--blue);
+    white-space: nowrap;
+  }
+
+  &__age {
+    @include mixins.mobBody-light-12;
+    color: rgba(118, 118, 118, 1);
+  }
+
+  &__line {
+    border-radius: 30px;
+    height: 16px;
+
+    &--first {
+      background: var(--violet_3);
+      width: calc(39 * 100% / 198);
+    }
+
+    &--second {
+      background: var(--violet_2);
+      width: calc(71 * 100% / 198);
+    }
+
+    &--third {
+      background: var(--blue);
+      width: calc(165 * 100% / 198);
+    }
+
+    &--fourth {
+      background: var(--blue);
+      width: calc(125 * 100% / 198);
+    }
+
+    &--fifth {
+      background: var(--blue);
+      width: 100%;
+    }
+  }
+
+  &__desk-percent {
+    display: block;
+
+    @media (width < vars.$media-768) {
+      display: none;
+    }
+  }
+}

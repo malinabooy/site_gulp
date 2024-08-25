@@ -1,0 +1,23 @@
+// Подклчюение шрифтов
+@use 'fonts/fonts';
+// ---
+
+// Подключение библиотек
+@use '~@verno.digital/newest-css-reset/src/reset';
+@use '~swiper/swiper';
+//@use '~nouislider/dist/nouislider';
+@use '~@fancyapps/ui/dist/fancybox/fancybox.css';
+//@use '~simplebar/dist/simplebar.css';
+// ---
+
+// Подключение переменных, для иницилизации css-переменных
+@use 'vars/vars';
+// ---
+
+// Базовые стили
+@use 'base';
+// ---
+
+// BEM блоки
+@use '../modules/**/*.scss';
+// ---

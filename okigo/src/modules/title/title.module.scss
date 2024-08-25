@@ -1,0 +1,28 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.title {
+  @include mixins.H0-regular;
+  margin-bottom: 50px;
+
+  @media (width < vars.$media-1280) {
+    @include mixins.H1-medium;
+    margin-bottom: 30px;
+  }
+
+  @media (width < vars.$media-768) {
+    margin-bottom: 20px;
+  }
+
+  @media (width < vars.$media-420) {
+    @include mixins.H2-medium;
+  }
+
+  &--white {
+    color: var(--white);
+  }
+
+  &--nomb {
+    margin-bottom: 0;
+  }
+}

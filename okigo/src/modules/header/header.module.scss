@@ -1,0 +1,235 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.header {
+  margin-bottom: 50px;
+
+  @media (width < vars.$media-1280) {
+    margin-bottom: 20px;
+  }
+
+  @media (width < vars.$media-768) {
+    margin-bottom: 15px;
+  }
+
+  @media (width < vars.$media-420) {
+    margin-bottom: 4px;
+  }
+
+  &__top-container {
+    @media (width < vars.$media-1280) {
+      display: contents;
+    }
+  }
+
+  &__top {
+    @include mixins.Body-light-20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    transition: vars.$duration background-color vars.$timing;
+
+    @media (width < vars.$media-1280) {
+      background-color: var(--blue);
+      padding-inline: var(--container-gap);
+      padding-block: 16px;
+
+      .header__top-nav {
+        display: none;
+      }
+    }
+
+    @media (width < vars.$media-420) {
+      padding-top: 6px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__top-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    justify-content: center;
+    flex-grow: 1;
+    padding-right: 18px;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-light-16;
+    }
+
+    @media (width < vars.$media-768) {
+      padding-block: 12px;
+      overflow-x: auto;
+      margin-right: calc(var(--container-gap) * -1);
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    @media (width < vars.$media-420) {
+      @include mixins.mobBody-light-12;
+    }
+  }
+
+  &__link {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 10px 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    cursor: pointer;
+    transition: vars.$duration border-color vars.$timing;
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: var(--blue);
+      }
+    }
+
+    &:active {
+      border-color: var(--blue);
+    }
+
+    @media (width < vars.$media-1280) {
+      padding: 6px;
+      border-radius: 10px;
+    }
+
+    @media (width < vars.$media-768) {
+      height: 24px;
+    }
+  }
+
+  &__menu {
+    margin-left: 20px;
+  }
+
+  &__lk-entry {
+    margin-top: 5px;
+    margin-right: 23px;
+
+    @media (width < vars.$media-1280) {
+      color: var(--white) !important;
+      margin-top: 0;
+      margin-right: 0;
+      padding: 0 !important;
+    }
+  }
+
+  &__bottom {
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .header__top-nav {
+      display: none;
+    }
+
+    @media (width < vars.$media-1280) {
+      gap: 24px;
+
+      .header__top-nav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+      }
+    }
+
+    @media (width < vars.$media-768) {
+      margin-top: 12px;
+    }
+
+    @media (width < vars.$media-420) {
+      gap: 24px - 6px;
+      margin-top: 2px;
+
+      .header__top-nav {
+        gap: 2px;
+      }
+    }
+  }
+
+  &__search {
+    margin-inline: auto;
+    padding-right: 136px;
+
+    @media (width < vars.$media-1280) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    @media (width < vars.$media-1280) {
+      color: var(--white) !important;
+    }
+  }
+
+  &__top-media-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__search-button {
+    display: none;
+    color: var(--white);
+    cursor: pointer;
+    transition: vars.$duration color vars.$timing;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--blue);
+
+        @media (width < vars.$media-1280) {
+          color: var(--blue_4);
+        }
+      }
+    }
+
+    @media (width < vars.$media-1280) {
+      display: block;
+    }
+
+    svg {
+      @include mixins.box-size(28px);
+
+      @media (width < vars.$media-420) {
+        @include mixins.box-size(20px);
+      }
+    }
+  }
+
+  &__city-desk {
+    @media (width < vars.$media-1280) {
+      display: none;
+    }
+  }
+
+  &__city-mob {
+    @media (width >= vars.$media-1280) {
+      display: none;
+    }
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  &--white {
+    .header__top {
+      background-color: var(--white);
+    }
+    .header__logo {
+      color: var(--blue) !important;
+    }
+
+    .header__search-button {
+      color: var(--black);
+    }
+  }
+}

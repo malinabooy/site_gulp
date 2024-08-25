@@ -1,0 +1,9 @@
+@use '@/styles/vars/media';
+
+.interesting-articles {
+  margin-block: 100px;
+
+  @media (width < media.$media-768) {
+    margin-block: 40px;
+  }
+}

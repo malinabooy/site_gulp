@@ -1,0 +1,13 @@
+.modal-profile {
+
+  border-radius: 0 0 20px 20px;
+  background: var(--white);
+  width: 100%;
+  height: max-content;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-10px);
+
+  transition: 200ms transform linear;
+}

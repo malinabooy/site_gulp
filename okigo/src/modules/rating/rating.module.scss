@@ -1,0 +1,48 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.rating {
+  padding-bottom: 100px;
+
+  @media (width < vars.$media-768) {
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 47px;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.H1-medium ;
+    }
+
+    @media (width < vars.$media-420) {
+      @include mixins.H2-medium;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .rating__card:nth-child(n+6) {
+      display: none!important;
+    }
+  }
+
+
+  &__button {
+    margin-top: 50px;
+    margin-inline: auto;
+    width: 380px;
+    padding: 13px 27px;
+
+    @media (width < vars.$media-768) {
+      @include mixins.mobBody-light-12;
+      width: 100%;
+      height: 31px;
+      margin-top: 20px;
+    }
+  }
+
+}

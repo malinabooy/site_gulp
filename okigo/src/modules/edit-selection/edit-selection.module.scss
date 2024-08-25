@@ -1,0 +1,24 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.edit-selection {
+  margin-top: 56px;
+
+  @media (width < vars.$media-768) {
+    margin-top: 40px;
+  }
+
+  &__grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  .swiper-slide:has(.edit-selection__grid) {
+    @media (width < vars.$media-1280) {
+      display: none;
+    }
+
+  }
+}

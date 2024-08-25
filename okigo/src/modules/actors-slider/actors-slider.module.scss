@@ -1,0 +1,100 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.actors-slider {
+  margin-bottom: 80px;
+  overflow: hidden;
+
+  .swiper {
+    margin-inline: -20vw;
+    padding-inline: 20vw;
+
+    @media (width < 1500px) {
+      margin-inline: -8vw;
+      padding-inline: 8vw;
+    }
+
+    @media (width < vars.$media-1280) {
+      margin-inline: calc(var(--container-gap) * -1);
+      padding-inline: var(--container-gap);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @media (width < vars.$media-768) {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      @include mixins.H1-medium;
+
+      @media (width < vars.$media-768) {
+        @include mixins.H2-medium;
+      }
+    }
+  }
+
+  &__card {
+    @include mixins.Body-light-24;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-light-14;
+    }
+
+    @media (width < vars.$media-420) {
+      @include mixins.mobBody-light-12;
+    }
+
+    img {
+      @include mixins.box-size(225px);
+      border-radius: 50%;
+      object-position: center;
+      object-fit: cover;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+
+      @media (width < vars.$media-1920) {
+        @include mixins.box-size(175px);
+      }
+
+      @media (width < vars.$media-768) {
+        @include mixins.box-size(120px);
+        margin-bottom: 5px;
+      }
+
+      @media (width < vars.$media-420) {
+        @include mixins.box-size(80px);
+      }
+    }
+  }
+
+  &__name {
+    @include mixins.crop-height(2);
+    word-spacing: 999px;
+    margin-bottom: 10px;
+
+    @media (width < vars.$media-768) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__prof {
+    color: #30303080;
+  }
+
+  &__arrows {
+    @media (width < vars.$media-768) {
+      display: none!important;
+    }
+  }
+}

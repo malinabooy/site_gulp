@@ -1,0 +1,26 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.news {
+  .swiper-grid > .swiper-wrapper {
+    display: grid !important;
+    grid-template-rows: auto auto !important;
+    grid-auto-flow: column !important;
+    row-gap: 20px !important;
+  }
+
+  .swiper-slide {
+    height: auto !important;
+    margin-top: 0 !important;
+  }
+
+  @media (width < vars.$media-1280) {
+    margin-bottom: 40px;
+  }
+
+  &--no-mb {
+    @media (width < vars.$media-1280) {
+      margin-bottom: 0;
+    }
+  }
+}

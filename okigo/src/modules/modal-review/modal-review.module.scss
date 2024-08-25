@@ -1,0 +1,31 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.modal-review {
+  max-width: 585px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (width < vars.$media-768) {
+    margin-block: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__title {
+    @include mixins.H2-medium;
+  }
+
+  &__select {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 13px;
+
+    @media (width < vars.$media-768) {
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    }
+  }
+}

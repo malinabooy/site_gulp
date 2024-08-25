@@ -1,0 +1,22 @@
+:root {
+  --overlay-index: 400;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 49;
+  background: rgb(0, 0, 0, 0.8);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 100ms opacity ease-in-out;
+
+  &--active {
+    pointer-events: unset;
+    opacity: 1;
+  }
+}

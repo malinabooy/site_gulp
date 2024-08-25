@@ -1,0 +1,121 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.city-change {
+  position: relative;
+  width: max-content;
+
+
+  &__body {
+    @include mixins.dropdown-body;
+
+    z-index: vars.$z-index-interactive;
+    max-height: 450px;
+    width: 355px;
+    left: 0;
+    right: unset;
+
+    @media (width < vars.$media-768) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    h3 {
+      @include mixins.H1-medium;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    max-height: 300px;
+    overflow-y: auto;
+    @include mixins.scroll;
+
+    a {
+      @include mixins.Body-light-16;
+      padding-block: 5px;
+      cursor: pointer;
+      transition: vars.$duration color vars.$timing;
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--blue);
+        }
+      }
+
+      &[active] {
+        color: var(--blue);
+      }
+    }
+  }
+
+  &[active] {
+    .city-change__body {
+      opacity: 1;
+      pointer-events: unset;
+    }
+
+    .city-change-panel {
+      color: var(--blue);
+    }
+
+    .city-change-panel--white {
+      color: var(--grey_2);
+    }
+  }
+}
+
+.city-change-panel {
+  @include mixins.Body-light-20;
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+  transition: vars.$duration color vars.$timing;
+
+  @media (width < vars.$media-1280) {
+    @include mixins.Body-light-16;
+    gap: 8px;
+  }
+
+  @media (width < vars.$media-420) {
+    @include mixins.mobBody-light-12;
+    gap: 5px;
+  }
+
+  &:hover {
+    color: var(--blue);
+  }
+
+  svg {
+    color: var(--blue);
+    width: 13px;
+    height: 18px;
+
+    @media (width < vars.$media-768) {
+      width: 11px;
+      height: 16px;
+    }
+
+    @media (width < vars.$media-420) {
+      width: 8px;
+      height: 12px;
+    }
+  }
+
+  &--white {
+    color: var(--white);
+
+    svg {
+      color: var(--white);
+    }
+
+    &:hover {
+      color: var(--grey_2);
+    }
+  }
+}

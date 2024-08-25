@@ -1,0 +1,110 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.top-films {
+  padding-top: 50px;
+  margin-bottom: 100px;
+
+  @media (width < vars.$media-1280) {
+    padding-top: 0;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  &__body {
+    display: flex;
+    gap: 80px;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 30px;
+    background-image: url('/assets/images/top-back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (width < vars.$media-1280) {
+      flex-direction: column;
+      gap: 40px;
+      padding: 0;
+      background-image: unset;
+    }
+
+    @media (width < vars.$media-768) {
+    }
+  }
+
+  &__cards-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (width < vars.$media-768) {
+      gap: 23px;
+    }
+  }
+
+  &__col {
+    width: 100%;
+
+    @media (width < vars.$media-1280) {
+      background-color: #f5f5f5;
+      padding: 20px var(--container-gap);
+      border-radius: 15px;
+    }
+
+    @media (width < vars.$media-768) {
+      padding: 15px;
+    }
+  }
+
+  &__col-header {
+    @include mixins.H1-medium;
+
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-bottom: 50px;
+    cursor: pointer;
+
+    @media (width < vars.$media-1280) {
+      margin-bottom: 20px;
+    }
+
+    @media (width < vars.$media-768) {
+      @include mixins.H2-medium;
+      pointer-events: none;
+      cursor: initial;
+
+      img {
+        display: none;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        img {
+          transform: translateX(6px);
+        }
+      }
+    }
+
+    img {
+      transition: vars.$duration transform vars.$timing;
+    }
+  }
+
+  &__button {
+    @media (width >= vars.$media-768) {
+      display: none !important;
+    }
+  }
+
+  &--gray-back {
+    .top-films__body {
+      background-image: url('/assets/images/top-back-grey.png');
+
+      @media (width < vars.$media-1280) {
+        background-image: unset;
+      }
+    }
+  }
+}

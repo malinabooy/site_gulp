@@ -1,0 +1,72 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+:root {
+  body:has(.tap-bar) {
+    @media (width < vars.$media-768) {
+      --tap-bar-height: 77px;
+    }
+
+    @media (width < vars.$media-420) {
+      --tap-bar-height: 50px;
+    }
+  }
+
+}
+
+.tap-bar {
+  height: var(--tap-bar-height);
+  position: fixed;
+  z-index: vars.$z-index-modal + vars.$z-index-back;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 10px 2px #00000033;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 30px;
+  border-radius: 10px 10px 0 0;
+
+  @media (width >= vars.$media-768) {
+    display: none;
+  }
+
+  @media (width < vars.$media-420) {
+    gap: 50px;
+    justify-content: center;
+  }
+
+  &__item {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    transition: vars.$duration color vars.$timing;
+
+    &:active {
+      color: var(--blue);
+    }
+
+    @media (width < vars.$media-420) {
+      font-size: 6px;
+      line-height: 7.26px;
+    }
+
+    svg {
+      @include mixins.box-size(36px);
+      flex-shrink: 0;
+
+      @media (width < vars.$media-420) {
+        @include mixins.box-size(24px);
+      }
+    }
+  }
+}

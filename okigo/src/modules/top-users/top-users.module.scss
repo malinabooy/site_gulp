@@ -1,0 +1,118 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.top-users {
+  &__body {
+    display: flex;
+    gap: 48px;
+
+    @media (width < vars.$media-1024) {
+      flex-direction: column;
+    }
+  }
+
+  &__aside {
+    border: 1px solid var(--grey_2);
+    width: 320px;
+    padding: 12px 10px;
+    border-radius: 20px;
+    max-height: 605px;
+
+    @media (width < vars.$media-1920) {
+      width: 260px;
+    }
+
+    @media (width < vars.$media-1024) {
+      width: 100%;
+      max-height: 400px;
+    }
+
+    @media (width < vars.$media-768) {
+      padding: 7px 5px;
+    }
+
+    @media (width < vars.$media-420) {
+      max-height: 150px;
+    }
+  }
+
+  &__aside-wrap {
+    @include mixins.scroll;
+    overflow-y: auto;
+    padding-right: 12px;
+    max-height: 605px - 24px;
+    display: flex;
+    flex-direction: column;
+
+    @media (width < vars.$media-1024) {
+      width: 100%;
+      max-height: 400px - 24px;
+    }
+
+    @media (width < vars.$media-420) {
+      max-height: 150px - 14px;
+    }
+  }
+
+  &__aside-item {
+    @include mixins.Body-light-16;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    width: 100%;
+    cursor: pointer;
+
+    transition: vars.$duration background-color vars.$timing, vars.$duration color vars.$timing,
+      vars.$duration border-color vars.$timing;
+
+    @media (width < vars.$media-768) {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 16.94px;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: var(--blue);
+      }
+    }
+
+    &--active {
+      background-color: var(--blue);
+      color: var(--white);
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (width < vars.$media-768) {
+      gap: 37px;
+    }
+  }
+
+  &__card {
+    &:nth-child(n + 11) {
+      display: none;
+    }
+  }
+
+  [data-id='show-more'] {
+    margin-top: 50px;
+
+    @media (width < vars.$media-768) {
+      margin-top: 30px;
+    }
+  }
+
+  &[data-show] {
+    .top-users__card:nth-child(n + 11) {
+      display: grid;
+    }
+  }
+}

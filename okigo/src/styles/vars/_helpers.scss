@@ -1,0 +1,10 @@
+@use '@/styles/vars/media';
+
+:root {
+  --padding-section: 50px;
+  --blue-background: #EEF3FF;
+
+  @media (width < media.$media-768) {
+    --padding-section: 37px;
+  }
+}

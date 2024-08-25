@@ -1,0 +1,52 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.statistics-regions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  @media (width < vars.$media-768) {
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+  }
+
+  &__city {
+    @include mixins.Body-regular-18;
+    color: rgba(48, 48, 48, 0.5);
+    flex-shrink: 0;
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-light-14;
+    }
+  }
+
+  &__dash {
+    width: 100%;
+    border-bottom: 2px dotted rgba(48, 48, 48, 0.5);
+    margin-bottom: 6px;
+
+    @media (width < vars.$media-768) {
+      margin-bottom: 4px;
+    }
+    @media (width < vars.$media-420) {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__number {
+    @include mixins.Body-black-24;
+    color: var(--blue);
+    flex-shrink: 0;
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-black-18;
+    }
+  }
+}

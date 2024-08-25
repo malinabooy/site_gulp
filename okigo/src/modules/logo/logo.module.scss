@@ -1,0 +1,30 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.logo {
+  cursor: pointer;
+  color: var(--blue);
+
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  svg {
+    width: 129px;
+    height: 56px;
+    transition: vars.$duration transform vars.$timing;
+
+    @media (width < vars.$media-768) {
+      width: 75px;
+      height: 33px;
+    }
+  }
+
+  &--white {
+    color: var(--white);
+  }
+}

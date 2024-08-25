@@ -1,0 +1,56 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.textarea {
+  position: relative;
+
+  textarea {
+    @include mixins.Body-light-20;
+    box-shadow: 0 0 6px 0 #00000033;
+    padding: 20px;
+    resize: vertical;
+    border-radius: 30px;
+    width: 100%;
+    border: 1px solid transparent;
+    transition: vars.$duration border-color vars.$timing,
+    vars.$duration color vars.$timing;
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-light-14;
+    }
+
+    &::placeholder {
+      color:#30303080;
+
+      transition: vars.$duration color vars.$timing;
+    }
+  }
+
+  &__error {
+    @include mixins.Body-light-14;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    color: var(--red);
+    transform: translateX(-10px);
+
+    transition: vars.$duration transform vars.$timing;
+
+    @media (width < vars.$media-768) {
+      @include mixins.mobBody-light-12;
+    }
+  }
+
+  &[is-error] {
+    textarea {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .textarea__error {
+      transform: translateX(0);
+    }
+  }
+}
+
+

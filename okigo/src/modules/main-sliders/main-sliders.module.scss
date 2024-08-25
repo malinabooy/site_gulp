@@ -1,0 +1,11 @@
+@use '@/styles/vars/media';
+
+.main-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  @media (width < media.$media-768) {
+    gap: 40px;
+  }
+}

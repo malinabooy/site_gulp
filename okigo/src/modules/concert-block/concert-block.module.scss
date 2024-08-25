@@ -1,0 +1,69 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.concert-block {
+  padding-bottom: 100px;
+
+  @media (width < vars.$media-768) {
+    padding-bottom: 40px;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px var(--grid-gap);
+
+    @media (width < vars.$media-1280) {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--grid-gap);
+    }
+
+    .concert-block__card {
+      @media (width >= vars.$media-1280) {
+        &:nth-child(n + 13) {
+          display: none;
+        }
+      }
+
+      @media (width < vars.$media-1280) {
+        &:nth-child(n + 9) {
+          display: none;
+        }
+      }
+    }
+
+    &[data-show] {
+      .concert-block__card {
+        @media (width >= vars.$media-1280) {
+          &:nth-child(n + 13) {
+            display: block;
+          }
+        }
+
+        @media (width < vars.$media-1280) {
+          &:nth-child(n + 9) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &__button {
+    grid-column: -1/1;
+    justify-self: center;
+    width: 380px;
+    height: 55px;
+    margin-top: 0;
+
+    @media (width < vars.$media-1280) {
+      height: 45px;
+      margin-top: 10px;
+    }
+
+    @media (width < vars.$media-768) {
+      width: 100%;
+      height: 31px;
+    }
+  }
+}

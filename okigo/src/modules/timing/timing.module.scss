@@ -1,0 +1,48 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.timing {
+  margin-top: 116px;
+  margin-bottom: 99px;
+
+  @media (width < vars.$media-768) {
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    filter: blur(3);
+
+    margin-block: 41px;
+    padding: 30px 50px;
+  }
+
+
+  &__big-diagram {
+    img {
+      width: 100%;
+    }
+
+    @media (width < vars.$media-768) {
+      display: none;
+    }
+  }
+
+  &__media {
+    display: none;
+
+    @media (width < vars.$media-768) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  &__numbers-item{
+    text-align: center;
+    h3 {
+      @include mixins.Body-black-18;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    p {
+      @include mixins.Body-regular-14;
+    }
+  }
+}

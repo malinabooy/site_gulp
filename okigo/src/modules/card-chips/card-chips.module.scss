@@ -1,0 +1,59 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.card-chips {
+  @include mixins.Body-light-14;
+  padding: 6px 12px;
+  height: 29px;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  color: var(--white);
+  flex-shrink: 0;
+
+  @media (width < vars.$media-768) {
+    padding: 5px 8px;
+  }
+
+  @media (width < vars.$media-420) {
+    @include mixins.mobBody-light-12;
+  }
+
+  &--white {
+    background-color: var(--white);
+    color: var(--black);
+  }
+
+  &--green {
+    background-color: var(--green);
+    color: var(--white);
+  }
+
+  &--big {
+    height: 44px;
+    padding: 10px ;
+    @include mixins.Body-light-20;
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-light-14;
+      height: 25px;
+      padding: 5px 8px;
+      border-radius: 15px;
+    }
+
+    @media (width < vars.$media-420) {
+      @include mixins.mobBody-light-12;
+    }
+  }
+
+  &--media-small {
+    @media (width < vars.$media-420) {
+      @include mixins.mobBody-light-9;
+      height: 17px;
+      border-radius: 5px;
+      padding: 3px 5px;
+    }
+  }
+}

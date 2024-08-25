@@ -1,0 +1,57 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.promo-slider {
+  margin-bottom: 50px;
+  overflow: hidden;
+
+  @media (width < vars.$media-768) {
+    margin-bottom: 40px;
+  }
+
+  &__container {
+    display: contents;
+
+    @media (width < vars.$media-768) {
+      display: block;
+    }
+  }
+
+  &__arrows {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    @media (width < vars.$media-768) {
+      display: none;
+    }
+  }
+
+  .swiper {
+    @include mixins.swiper-margin;
+  }
+
+  .swiper-wrapper {
+    margin-left: -16%;
+
+    @media (width < vars.$media-1920) {
+      margin-left: -31%;
+    }
+
+    @media (width < vars.$media-1280) {
+      margin-left: -24%;
+    }
+
+    @media (width < vars.$media-768) {
+      margin-left: unset;
+    }
+  }
+
+  .swiper-slide {
+    min-width: 480px;
+
+    @media (width < vars.$media-1280) {
+      min-width: 0;
+    }
+  }
+}

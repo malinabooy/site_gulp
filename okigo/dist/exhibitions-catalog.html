@@ -1,0 +1,1350 @@
+  <!DOCTYPE html>
+  <html lang="ru">
+    <head>
+      <meta charset="utf-8"></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+      <link rel="stylesheet" href="./css/styles.css"></link>
+      <title>Ok-by</title>
+      <meta name="description" content="Одна из страниц проекта Ok-by, предлагаем ознакомиться с программой"></meta>
+    </head>
+    <body>
+      <header class="header">
+        <div class="container header__top-container">
+          <div class="header__top">
+            <a href="/" class="logo header__logo">
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="header__top-nav">
+              <li>
+                <a href="javascript:void(0)" class="header__link">Люди</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Фильмы</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Концерты</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Театр</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Выставки</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Статьи</a>
+              </li>
+              <div class="menu-button header__menu">
+                <div class="menu-button__panel">
+                  <svg class="icon">
+                    <use href="/assets/icons/icons.svg#menu-button"></use>
+                  </svg>
+                </div>
+                <div class="menu-button__body">
+                  <a href="javascript:void(0)">Новости из мира кино</a>
+                  <a href="javascript:void(0)">Самые ожидаемые фильмы</a>
+                </div>
+              </div>
+            </nav>
+            <div class="header__top-media-wrap">
+              <button data-modal-open="#modal-search" class="header__search-button">
+                <svg class="icon">
+                  <use href="/assets/icons/icons.svg#search-button"></use>
+                </svg>
+              </button>
+              <a href="javascript:void(0)" class="lk-entry header__lk-entry">
+                <span class="lk-entry__img-wrap">
+                  <svg class="icon">
+                    <use href="/assets/icons/icons.svg#ok"></use>
+                  </svg>
+                </span>
+                Вход
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="header__bottom">
+            <div class="city-change header__city-desk" data-id="ui-dropdown">
+              <input type="hidden" data-id="backend"></input>
+              <div class="city-change-panel" data-id="panel">
+                <svg class="icon">
+                  <use href="/assets/icons/icons.svg#location"></use>
+                </svg>
+                <p data-id="text">Москва</p>
+              </div>
+              <div class="city-change__body" data-id="body">
+                <div class="city-change__wrapper">
+                  <h3>Выбор города</h3>
+                  <div class="city-change__list">
+                    <a href="javascript:void(0)" data-id="drop-item">Алушта</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Феодосия</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Ялта</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Севастополь</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Симферополь</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Абакан</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Адлер</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Анапа</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Ангарск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Архангельск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Астрахань</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Барнаул</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Белгород</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Благовещенск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Чебоксары</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Челябинск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Череповец</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Черняховск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Чита</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Екатеринбург</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Геленджик</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Иркутск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Ижевск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Кабардинка</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Калининград</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Казань</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Кемерово</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Хабаровск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Ханты-Мансийск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Кисловодск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Комсомольск-на-Амуре</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Кострома</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Краснодар</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Красноярск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Курган</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Курск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Липецк</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Листвянка</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Магадан</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Магнитогорск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Махачкала</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Минеральные Воды</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Москва</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Мурманск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Находка</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Нальчик</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Нижневартовск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Нижнекамск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Нижний Новгород</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Ноябрьск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Норильск</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Новокузнецк</a>
+                    <a href="javascript:void(0)" data-id="drop-item">Новороссийск</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="header__city-mob" data-modal-open="#modal-city">
+              <div class="city-change-panel" data-id="panel">
+                <svg class="icon">
+                  <use href="/assets/icons/icons.svg#location"></use>
+                </svg>
+                <p data-id="text">Москва</p>
+              </div>
+            </button>
+            <div class="search header__search">
+              <label class="search__label">
+                <svg class="icon">
+                  <use href="/assets/icons/icons.svg#search"></use>
+                </svg>
+                <input type="search" class="search__input" placeholder="Поиск"></input>
+              </label>
+              <div class="search__body">
+                <div class="search__wrap">
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря и Шамаханская царица</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря на дальних берегах</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря: Ход конём</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря и морской царь</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря и принцесса Египта</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря и Наследница престола</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Алёша Попович и Тугарин Змей</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Добрыня Никитич</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Илья Муромец и Соловей Разбойник</a>
+                  <p data-id="not-found">Ничего не найдено:(</p>
+                </div>
+              </div>
+            </div>
+            <nav class="header__top-nav">
+              <li>
+                <a href="javascript:void(0)" class="header__link">Люди</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Фильмы</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Концерты</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Театр</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Выставки</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="header__link">Статьи</a>
+              </li>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="promo-slider">
+        <div class="container promo-slider__container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="javascript:void(0)" class="promo-card">
+                  <div class="promo-card__chips">
+                    <div class="card-chips card-chips--white card-chips--big">Выставка</div>
+                    <div class="card-chips card-chips--big">от 1400 ₽</div>
+                  </div>
+                  <img src="/modules/promo-slider/91ba718a51a38a0a59764ad495010a54.png" alt=""></img>
+                  <div class="promo-card__eventInfo">
+                    <h2 class="promo-card__event-name">Музейная программа для детей и родителей</h2>
+                    <p class="promo-card__event-date">до 29 февраля,  Эрмитаж - Казань</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)" class="promo-card">
+                  <div class="promo-card__chips">
+                    <div class="card-chips card-chips--white card-chips--big">Экскурсия</div>
+                    <div class="card-chips card-chips--big">от 1800 ₽</div>
+                  </div>
+                  <img src="/modules/promo-slider/7730bd5dd3a7b2394b7822b3833de991.png" alt=""></img>
+                  <div class="promo-card__eventInfo">
+                    <h2 class="promo-card__event-name">Посещение СоюзМультПарка</h2>
+                    <p class="promo-card__event-date">Союзмультпарк, до 31 мая</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)" class="promo-card">
+                  <div class="promo-card__chips">
+                    <div class="card-chips card-chips--white card-chips--big">Мастер-класс</div>
+                    <div class="card-chips card-chips--big">от 1500 ₽</div>
+                  </div>
+                  <img src="/modules/promo-slider/034841b1d42ace331087759e7eb13c3e.png" alt=""></img>
+                  <div class="promo-card__eventInfo">
+                    <h2 class="promo-card__event-name">Тюльпан счастья</h2>
+                    <p class="promo-card__event-date">Национальный музей Республики Татарстан, до 29 декабря</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)" class="promo-card">
+                  <div class="promo-card__chips">
+                    <div class="card-chips card-chips--white card-chips--big">Лекции</div>
+                    <div class="card-chips card-chips--big">от 1400 ₽</div>
+                  </div>
+                  <img src="/modules/promo-slider/138053f86c64ea34b944fc3e7d662c2d.png" alt=""></img>
+                  <div class="promo-card__eventInfo">
+                    <h2 class="promo-card__event-name">Лекция «Казань 1840-х годов»</h2>
+                    <p class="promo-card__event-date">Национальный музей Республики Татарстан, до 29 декабря</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)" class="promo-card">
+                  <div class="promo-card__chips">
+                    <div class="card-chips card-chips--white card-chips--big">Историческая</div>
+                    <div class="card-chips card-chips--big">от 800 ₽</div>
+                  </div>
+                  <img src="/modules/promo-slider/2e77b073b6920d687dddd5025ce0a0d8.png" alt=""></img>
+                  <div class="promo-card__eventInfo">
+                    <h2 class="promo-card__event-name">Экспозиция Национального музея Республики Татарстан</h2>
+                    <p class="promo-card__event-date">До 28 декабря, Национальный музей Республики Татарстан</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)" class="promo-card">
+                  <div class="promo-card__chips">
+                    <div class="card-chips card-chips--white card-chips--big">Естественно-научная</div>
+                    <div class="card-chips card-chips--big">от 1800 ₽</div>
+                  </div>
+                  <img src="/modules/promo-slider/9ecd55962f5d202848892e1afd298112.png" alt=""></img>
+                  <div class="promo-card__eventInfo">
+                    <h2 class="promo-card__event-name">Повелитель молний</h2>
+                    <p class="promo-card__event-date">Постоянная экспозиция, Повелитель молний</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)" class="promo-card">
+                  <div class="promo-card__chips">
+                    <div class="card-chips card-chips--white card-chips--big">Мастер-классы</div>
+                    <div class="card-chips card-chips--big">от 1500 ₽</div>
+                  </div>
+                  <img src="/modules/promo-slider/974d72969cd25e70e6900c2a6a3de73c.png" alt=""></img>
+                  <div class="promo-card__eventInfo">
+                    <h2 class="promo-card__event-name">Музейное занятие с мастер-классом «Не боги горшки обжигают</h2>
+                    <p class="promo-card__event-date">До 29 декабря, Национальный музей Республики Татарстан</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)" class="promo-card">
+                  <div class="promo-card__chips">
+                    <div class="card-chips card-chips--white card-chips--big">Историческая</div>
+                    <div class="card-chips card-chips--big">от 800 ₽</div>
+                  </div>
+                  <img src="/modules/promo-slider/10901cb8bd0ae217d8f73bc515068607.png" alt=""></img>
+                  <div class="promo-card__eventInfo">
+                    <h2 class="promo-card__event-name">Они были первыми</h2>
+                    <p class="promo-card__event-date">До 18 мая, Национальный музей Республики Татарстан</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container promo-slider__arrows">
+          <div class="swiper-arrows">
+            <button class="swiper-arrow" data-id="carret-left">
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#carret-left"></use>
+              </svg>
+            </button>
+            <button class="swiper-arrow" data-id="carret-right">
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#carret-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="calendar">
+        <div class="calendar__wrap">
+          <div class="container calendar__body">
+            <button class="swiper-arrow calendar__arrow calendar__arrow--disabled" data-id="carret-left">
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#carret-left"></use>
+              </svg>
+            </button>
+            <div class="calendar__slider">
+              <div class="calendar__slide">
+                <h3 class="calendar__slide-title">СЕНТЯБРЬ</h3>
+                <div class="calendar__block">
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">вт</span>
+                    <time datetime="26" data-id="date">26</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">ср</span>
+                    <time datetime="27" data-id="date">27</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">чт</span>
+                    <time datetime="28" data-id="date">28</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">пт</span>
+                    <time datetime="29" data-id="date">29</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--holiday">
+                    <span data-id="week">сб</span>
+                    <time datetime="30" data-id="date">30</time>
+                  </a>
+                </div>
+              </div>
+              <div class="calendar__slide">
+                <h3 class="calendar__slide-title">ОКТЯБРЬ</h3>
+                <div class="calendar__block">
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--holiday">
+                    <span data-id="week">вс</span>
+                    <time datetime="0" data-id="date">1</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">пн</span>
+                    <time datetime="1" data-id="date">2</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">вт</span>
+                    <time datetime="2" data-id="date">3</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">ср</span>
+                    <time datetime="3" data-id="date">4</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">чт</span>
+                    <time datetime="4" data-id="date">5</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--active">
+                    <span data-id="week">пт</span>
+                    <time datetime="5" data-id="date">6</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--holiday">
+                    <span data-id="week">сб</span>
+                    <time datetime="6" data-id="date">7</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--holiday">
+                    <span data-id="week">вс</span>
+                    <time datetime="7" data-id="date">8</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">пн</span>
+                    <time datetime="8" data-id="date">9</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">вт</span>
+                    <time datetime="9" data-id="date">10</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">ср</span>
+                    <time datetime="10" data-id="date">11</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">чт</span>
+                    <time datetime="11" data-id="date">12</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">пт</span>
+                    <time datetime="12" data-id="date">13</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--holiday">
+                    <span data-id="week">сб</span>
+                    <time datetime="13" data-id="date">14</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--holiday">
+                    <span data-id="week">вс</span>
+                    <time datetime="14" data-id="date">15</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">пн</span>
+                    <time datetime="15" data-id="date">16</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">вт</span>
+                    <time datetime="16" data-id="date">17</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">ср</span>
+                    <time datetime="17" data-id="date">18</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">чт</span>
+                    <time datetime="18" data-id="date">19</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">пт</span>
+                    <time datetime="19" data-id="date">20</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--holiday">
+                    <span data-id="week">сб</span>
+                    <time datetime="20" data-id="date">21</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--holiday">
+                    <span data-id="week">вс</span>
+                    <time datetime="21" data-id="date">22</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">пн</span>
+                    <time datetime="22" data-id="date">23</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">вт</span>
+                    <time datetime="23" data-id="date">24</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">ср</span>
+                    <time datetime="24" data-id="date">25</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">чт</span>
+                    <time datetime="25" data-id="date">26</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item">
+                    <span data-id="week">пт</span>
+                    <time datetime="26" data-id="date">27</time>
+                  </a>
+                  <a href="javascript:void(0)" class="calendar__item calendar__item--holiday">
+                    <span data-id="week">сб</span>
+                    <time datetime="27" data-id="date">28</time>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="swiper-arrow calendar__arrow" data-id="carret-right">
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#carret-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="concert-block">
+        <div class="container concert-block__body" data-id="show-more-body">
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/91ba718a51a38a0a59764ad495010a54.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Экспозиция Национального музея Республики Татарстан</h2>
+                <p class="concert-card__desc">Историческая</p>
+                <p class="concert-card__desc">До 28 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/7730bd5dd3a7b2394b7822b3833de991.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Повелитель молний</h2>
+                <p class="concert-card__desc">Естественно-научная</p>
+                <p class="concert-card__desc">Постоянная экспозиция, Повелитель молний</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/034841b1d42ace331087759e7eb13c3e.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Музейное занятие с мастер-классом «Не боги горшки обжигают</h2>
+                <p class="concert-card__desc">Мастер-классы</p>
+                <p class="concert-card__desc">До 29 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/138053f86c64ea34b944fc3e7d662c2d.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Они были первыми</h2>
+                <p class="concert-card__desc">Историческая</p>
+                <p class="concert-card__desc">До 18 мая, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/2e77b073b6920d687dddd5025ce0a0d8.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Женский вопрос в казанской литературе и журналистике до 1917 года»</h2>
+                <p class="concert-card__desc">Лекции</p>
+                <p class="concert-card__desc">До 8 апреля, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/9ecd55962f5d202848892e1afd298112.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Квест-игра «Путешествие с Петром I по Казани»</h2>
+                <p class="concert-card__desc">Квест-игра</p>
+                <p class="concert-card__desc">До 29 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/974d72969cd25e70e6900c2a6a3de73c.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Герои Татарстана»</h2>
+                <p class="concert-card__desc">Лекции</p>
+                <p class="concert-card__desc">До 29 июня, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/10901cb8bd0ae217d8f73bc515068607.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Герои Татарстана»</h2>
+                <p class="concert-card__desc">Экскурсии</p>
+                <p class="concert-card__desc">До 28 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/91ba718a51a38a0a59764ad495010a54.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Экспозиция Национального музея Республики Татарстан</h2>
+                <p class="concert-card__desc">Историческая</p>
+                <p class="concert-card__desc">До 28 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/7730bd5dd3a7b2394b7822b3833de991.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Повелитель молний</h2>
+                <p class="concert-card__desc">Естественно-научная</p>
+                <p class="concert-card__desc">Постоянная экспозиция, Повелитель молний</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/034841b1d42ace331087759e7eb13c3e.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Музейное занятие с мастер-классом «Не боги горшки обжигают</h2>
+                <p class="concert-card__desc">Мастер-классы</p>
+                <p class="concert-card__desc">До 29 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/138053f86c64ea34b944fc3e7d662c2d.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Они были первыми</h2>
+                <p class="concert-card__desc">Историческая</p>
+                <p class="concert-card__desc">До 18 мая, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/2e77b073b6920d687dddd5025ce0a0d8.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Женский вопрос в казанской литературе и журналистике до 1917 года»</h2>
+                <p class="concert-card__desc">Лекции</p>
+                <p class="concert-card__desc">До 8 апреля, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/9ecd55962f5d202848892e1afd298112.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Квест-игра «Путешествие с Петром I по Казани»</h2>
+                <p class="concert-card__desc">Квест-игра</p>
+                <p class="concert-card__desc">До 29 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/974d72969cd25e70e6900c2a6a3de73c.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Герои Татарстана»</h2>
+                <p class="concert-card__desc">Лекции</p>
+                <p class="concert-card__desc">До 29 июня, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/10901cb8bd0ae217d8f73bc515068607.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Герои Татарстана»</h2>
+                <p class="concert-card__desc">Экскурсии</p>
+                <p class="concert-card__desc">До 28 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/91ba718a51a38a0a59764ad495010a54.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Экспозиция Национального музея Республики Татарстан</h2>
+                <p class="concert-card__desc">Историческая</p>
+                <p class="concert-card__desc">До 28 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/7730bd5dd3a7b2394b7822b3833de991.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Повелитель молний</h2>
+                <p class="concert-card__desc">Естественно-научная</p>
+                <p class="concert-card__desc">Постоянная экспозиция, Повелитель молний</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/034841b1d42ace331087759e7eb13c3e.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Музейное занятие с мастер-классом «Не боги горшки обжигают</h2>
+                <p class="concert-card__desc">Мастер-классы</p>
+                <p class="concert-card__desc">До 29 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/138053f86c64ea34b944fc3e7d662c2d.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Они были первыми</h2>
+                <p class="concert-card__desc">Историческая</p>
+                <p class="concert-card__desc">До 18 мая, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/2e77b073b6920d687dddd5025ce0a0d8.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Женский вопрос в казанской литературе и журналистике до 1917 года»</h2>
+                <p class="concert-card__desc">Лекции</p>
+                <p class="concert-card__desc">До 8 апреля, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/9ecd55962f5d202848892e1afd298112.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Квест-игра «Путешествие с Петром I по Казани»</h2>
+                <p class="concert-card__desc">Квест-игра</p>
+                <p class="concert-card__desc">До 29 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/974d72969cd25e70e6900c2a6a3de73c.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Герои Татарстана»</h2>
+                <p class="concert-card__desc">Лекции</p>
+                <p class="concert-card__desc">До 29 июня, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/10901cb8bd0ae217d8f73bc515068607.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Герои Татарстана»</h2>
+                <p class="concert-card__desc">Экскурсии</p>
+                <p class="concert-card__desc">До 28 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/91ba718a51a38a0a59764ad495010a54.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Экспозиция Национального музея Республики Татарстан</h2>
+                <p class="concert-card__desc">Историческая</p>
+                <p class="concert-card__desc">До 28 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/7730bd5dd3a7b2394b7822b3833de991.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Повелитель молний</h2>
+                <p class="concert-card__desc">Естественно-научная</p>
+                <p class="concert-card__desc">Постоянная экспозиция, Повелитель молний</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/034841b1d42ace331087759e7eb13c3e.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Музейное занятие с мастер-классом «Не боги горшки обжигают</h2>
+                <p class="concert-card__desc">Мастер-классы</p>
+                <p class="concert-card__desc">До 29 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/138053f86c64ea34b944fc3e7d662c2d.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Они были первыми</h2>
+                <p class="concert-card__desc">Историческая</p>
+                <p class="concert-card__desc">До 18 мая, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/2e77b073b6920d687dddd5025ce0a0d8.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Женский вопрос в казанской литературе и журналистике до 1917 года»</h2>
+                <p class="concert-card__desc">Лекции</p>
+                <p class="concert-card__desc">До 8 апреля, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/9ecd55962f5d202848892e1afd298112.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Квест-игра «Путешествие с Петром I по Казани»</h2>
+                <p class="concert-card__desc">Квест-игра</p>
+                <p class="concert-card__desc">До 29 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/974d72969cd25e70e6900c2a6a3de73c.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Герои Татарстана»</h2>
+                <p class="concert-card__desc">Лекции</p>
+                <p class="concert-card__desc">До 29 июня, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="concert-card concert-card--media-small concert-block__card">
+              <div class="concert-card__image-container">
+                <img src="/modules/promo-slider/10901cb8bd0ae217d8f73bc515068607.png" alt=""></img>
+                <div class="card-chips card-chips--media-small concert-card__concert-chips">от 2900 ₽</div>
+              </div>
+              <div class="concert-card__footer">
+                <h2 class="concert-card__title">Лекция «Герои Татарстана»</h2>
+                <p class="concert-card__desc">Экскурсии</p>
+                <p class="concert-card__desc">До 28 декабря, Национальный музей Республики Татарстан</p>
+              </div>
+            </a>
+          <button class="button button--primary concert-block__button" data-id="show-more">Показать еще</button>
+        </div>
+      </div>
+      <div class="news">
+        <div class="container">
+          <div class="ui-slider-header">
+            <h2 class="title">Новости из мира кино</h2>
+            <a class="button button--primary ui-slider-header__button-media" href="javascript:void(0)">
+              Все 
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#carret-right"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="news-card">
+                    <img src="/modules/news/news-1.png" alt=""></img>
+                    <h2 class="news-card__comment">«Настоящий детектив: Страна ночи» — северная мистика или антикапиталистический процедурал?</h2>
+                    <time class="news-card__publishing-date" datetime="29.01">29.01</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="news-card">
+                    <img src="/modules/news/news-2.png" alt=""></img>
+                    <h2 class="news-card__comment">«Иные»: сериал о людях со сверхспособностями</h2>
+                    <time class="news-card__publishing-date" datetime="29.01">29.01</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="news-card">
+                    <img src="/modules/news/news-3.png" alt=""></img>
+                    <h2 class="news-card__comment">Объявили победителей премии «Золотой орел — 2024»: лучший фильм — «Снегирь»</h2>
+                    <time class="news-card__publishing-date" datetime="29.01">29.01</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="news-card">
+                    <img src="/modules/news/news-4.png" alt=""></img>
+                    <h2 class="news-card__comment">«Воздух» Алексея Германа-мл.: натуралистичная ВОВ-драма о войне в небе</h2>
+                    <time class="news-card__publishing-date" datetime="29.01">29.01</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="news-card">
+                    <img src="/modules/news/news-1.png" alt=""></img>
+                    <h2 class="news-card__comment">«Настоящий детектив: Страна ночи» — северная мистика или антикапиталистический процедурал?</h2>
+                    <time class="news-card__publishing-date" datetime="29.01">29.01</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="news-card">
+                    <img src="/modules/news/news-2.png" alt=""></img>
+                    <h2 class="news-card__comment">«Иные»: сериал о людях со сверхспособностями</h2>
+                    <time class="news-card__publishing-date" datetime="29.01">29.01</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="news-card">
+                    <img src="/modules/news/news-3.png" alt=""></img>
+                    <h2 class="news-card__comment">Объявили победителей премии «Золотой орел — 2024»: лучший фильм — «Снегирь»</h2>
+                    <time class="news-card__publishing-date" datetime="29.01">29.01</time>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="news-card">
+                    <img src="/modules/news/news-4.png" alt=""></img>
+                    <h2 class="news-card__comment">«Воздух» Алексея Германа-мл.: натуралистичная ВОВ-драма о войне в небе</h2>
+                    <time class="news-card__publishing-date" datetime="29.01">29.01</time>
+                  </a>
+                </div>
+            </div>
+          </div>
+          <div class="ui-slider-footer">
+            <a class="button button--primary ui-slider-footer__button-desk" href="javascript:void(0)">
+              Все 
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#carret-right"></use>
+              </svg>
+            </a>
+            <div class="ui-slider-footer__pagination"></div>
+            <div class="swiper-arrows swiper-arrows--small-gap ui-slider-footer__arrows">
+              <button class="swiper-arrow" data-id="carret-left">
+                <svg class="icon">
+                  <use href="/assets/icons/icons.svg#carret-left"></use>
+                </svg>
+              </button>
+              <button class="swiper-arrow" data-id="carret-right">
+                <svg class="icon">
+                  <use href="/assets/icons/icons.svg#carret-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="interesting-articles">
+        <div class="ui-slider">
+          <div class="container">
+            <div class="ui-slider-header">
+              <h2 class="title">Интересные статьи</h2>
+              <a class="button button--primary ui-slider-header__button-media" href="javascript:void(0)">
+                Все 
+                <svg class="icon">
+                  <use href="/assets/icons/icons.svg#carret-right"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="select-card">
+                    <img src="/modules/edit-selection/edit-1.png" alt=""></img>
+                    <div class="select-card__wrap">
+                      <h3 class="select-card__title">10 самых добрых фильмов про Рождество и Новый год</h3>
+                      <p class="select-card__date"> 24 января </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="select-card">
+                    <img src="/modules/edit-selection/edit-2.png" alt=""></img>
+                    <div class="select-card__wrap">
+                      <h3 class="select-card__title">Куда сходить на выходных в Москве?</h3>
+                      <p class="select-card__date"> 24 января </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="select-card">
+                    <img src="/modules/edit-selection/edit-3.png" alt=""></img>
+                    <div class="select-card__wrap">
+                      <h3 class="select-card__title">Выходные с ребенком: куда сводить детей...</h3>
+                      <p class="select-card__date"> 24 января </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="select-card">
+                    <img src="/modules/edit-selection/edit-4.png" alt=""></img>
+                    <div class="select-card__wrap">
+                      <h3 class="select-card__title">Гастроли театра «Практика» в Санкт-Петербурге</h3>
+                      <p class="select-card__date"> 24 января </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="select-card">
+                    <img src="/modules/edit-selection/edit-1.png" alt=""></img>
+                    <div class="select-card__wrap">
+                      <h3 class="select-card__title">10 самых добрых фильмов про Рождество и Новый год</h3>
+                      <p class="select-card__date"> 24 августа </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="select-card">
+                    <img src="/modules/edit-selection/edit-2.png" alt=""></img>
+                    <div class="select-card__wrap">
+                      <h3 class="select-card__title">Куда сходить на выходных в Москве?</h3>
+                      <p class="select-card__date"> 24 августа </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="select-card">
+                    <img src="/modules/edit-selection/edit-3.png" alt=""></img>
+                    <div class="select-card__wrap">
+                      <h3 class="select-card__title">Выходные с ребенком: куда сводить детей...</h3>
+                      <p class="select-card__date"> 24 августа </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)" class="select-card">
+                    <img src="/modules/edit-selection/edit-4.png" alt=""></img>
+                    <div class="select-card__wrap">
+                      <h3 class="select-card__title">Гастроли театра «Практика» в Санкт-Петербурге</h3>
+                      <p class="select-card__date"> 24 августа </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="ui-slider-footer">
+              <a class="button button--primary ui-slider-footer__button-desk" href="javascript:void(0)">
+                Все 
+                <svg class="icon">
+                  <use href="/assets/icons/icons.svg#carret-right"></use>
+                </svg>
+              </a>
+              <div class="ui-slider-footer__pagination"></div>
+              <div class="swiper-arrows swiper-arrows--small-gap ui-slider-footer__arrows">
+                <button class="swiper-arrow" data-id="carret-left">
+                  <svg class="icon">
+                    <use href="/assets/icons/icons.svg#carret-left"></use>
+                  </svg>
+                </button>
+                <button class="swiper-arrow" data-id="carret-right">
+                  <svg class="icon">
+                    <use href="/assets/icons/icons.svg#carret-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container footer__top-container">
+          <a href="/" class="logo footer__top-logo">
+            <svg class="icon">
+              <use href="/assets/icons/icons.svg#logo"></use>
+            </svg>
+          </a>
+          <nav class="footer__top-nav">
+            <li>
+              <a href="javascript:void(0)" class="footer__top-link">Люди</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="footer__top-link">Фильмы</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="footer__top-link">Концерты</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="footer__top-link">Театр</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="footer__top-link">Выставки</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="footer__top-link">Статьи</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="footer__top-link">Новости из мира кино</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="footer__top-link">Самые ожидаемые фильмы</a>
+            </li>
+          </nav>
+        </div>
+        <div class="container">
+          <div class="footer__separator"></div>
+        </div>
+        <div class="container footer__bottom-container">
+          <a href="/" class="logo logo--white footer__bottom-logo">
+            <svg class="icon">
+              <use href="/assets/icons/icons.svg#logo"></use>
+            </svg>
+          </a>
+          <p class="footer__bottom-copyright">©2024 Okigo</p>
+          <nav class="footer__bottom-nav">
+            <li>
+              <a href="javascript:void(0)" class="footer__bottom-link">Политика конфиденциальности</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="footer__bottom-link">Рекламодателям</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="footer__bottom-link">О проекте</a>
+            </li>
+          </nav>
+          <div class="footer__bottom-social">
+            <a href="javascript:void(0)" class="footer__media">
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#vk"></use>
+              </svg>
+            </a>
+            <a href="javascript:void(0)" class="footer__media">
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#telegram"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+      <div class="overlay"></div>
+      <div id="modal-search" class="modal">
+        <div class="modal-search">
+          <div class="modal-search__header">
+            <div class="search">
+              <label class="search__label">
+                <svg class="icon">
+                  <use href="/assets/icons/icons.svg#search"></use>
+                </svg>
+                <input type="search" class="search__input" placeholder="Поиск"></input>
+              </label>
+              <div class="search__body">
+                <div class="search__wrap">
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря и Шамаханская царица</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря на дальних берегах</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря: Ход конём</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря и морской царь</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря и принцесса Египта</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Три богатыря и Наследница престола</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Алёша Попович и Тугарин Змей</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Добрыня Никитич</a>
+                  <a href="javascript:void(0)" data-id="drop-item">Илья Муромец и Соловей Разбойник</a>
+                  <p data-id="not-found">Ничего не найдено:(</p>
+                </div>
+              </div>
+            </div>
+            <button data-modal-close="">Отмена</button>
+          </div>
+        </div>
+      </div>
+      <div id="modal-city" class="modal">
+        <div class="modal-city">
+          <div class="modal-city__header">
+            Выбор города
+            <button data-modal-close="">
+              <svg class="icon">
+                <use href="/assets/icons/icons.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-city__body">
+            <a href="javascript:void(0)">Алушта</a>
+            <a href="javascript:void(0)">Феодосия</a>
+            <a href="javascript:void(0)">Ялта</a>
+            <a href="javascript:void(0)">Севастополь</a>
+            <a href="javascript:void(0)">Симферополь</a>
+            <a href="javascript:void(0)">Абакан</a>
+            <a href="javascript:void(0)">Адлер</a>
+            <a href="javascript:void(0)">Анапа</a>
+            <a href="javascript:void(0)">Ангарск</a>
+            <a href="javascript:void(0)">Архангельск</a>
+            <a href="javascript:void(0)">Астрахань</a>
+            <a href="javascript:void(0)">Барнаул</a>
+            <a href="javascript:void(0)">Белгород</a>
+            <a href="javascript:void(0)">Благовещенск</a>
+            <a href="javascript:void(0)">Чебоксары</a>
+            <a href="javascript:void(0)">Челябинск</a>
+            <a href="javascript:void(0)">Череповец</a>
+            <a href="javascript:void(0)">Черняховск</a>
+            <a href="javascript:void(0)">Чита</a>
+            <a href="javascript:void(0)">Екатеринбург</a>
+            <a href="javascript:void(0)">Геленджик</a>
+            <a href="javascript:void(0)">Иркутск</a>
+            <a href="javascript:void(0)">Ижевск</a>
+            <a href="javascript:void(0)">Кабардинка</a>
+            <a href="javascript:void(0)">Калининград</a>
+            <a href="javascript:void(0)">Казань</a>
+            <a href="javascript:void(0)">Кемерово</a>
+            <a href="javascript:void(0)">Хабаровск</a>
+            <a href="javascript:void(0)">Ханты-Мансийск</a>
+            <a href="javascript:void(0)">Кисловодск</a>
+            <a href="javascript:void(0)">Комсомольск-на-Амуре</a>
+            <a href="javascript:void(0)">Кострома</a>
+            <a href="javascript:void(0)">Краснодар</a>
+            <a href="javascript:void(0)">Красноярск</a>
+            <a href="javascript:void(0)">Курган</a>
+            <a href="javascript:void(0)">Курск</a>
+            <a href="javascript:void(0)">Липецк</a>
+            <a href="javascript:void(0)">Листвянка</a>
+            <a href="javascript:void(0)">Магадан</a>
+            <a href="javascript:void(0)">Магнитогорск</a>
+            <a href="javascript:void(0)">Махачкала</a>
+            <a href="javascript:void(0)">Минеральные Воды</a>
+            <a href="javascript:void(0)">Москва</a>
+            <a href="javascript:void(0)">Мурманск</a>
+            <a href="javascript:void(0)">Находка</a>
+            <a href="javascript:void(0)">Нальчик</a>
+            <a href="javascript:void(0)">Нижневартовск</a>
+            <a href="javascript:void(0)">Нижнекамск</a>
+            <a href="javascript:void(0)">Нижний Новгород</a>
+            <a href="javascript:void(0)">Ноябрьск</a>
+            <a href="javascript:void(0)">Норильск</a>
+            <a href="javascript:void(0)">Новокузнецк</a>
+            <a href="javascript:void(0)">Новороссийск</a>
+          </div>
+        </div>
+      </div>
+      <div id="modal-review" class="modal">
+        <div class="modal-center">
+          <button class="modal-center__close" data-modal-close>
+            <svg class="icon">
+              <use href="/assets/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <form class="modal-review">
+            <h2 class="modal-review__title">Оцените фильм</h2>
+            <div class="modal-review__select">
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden></input>
+                <div class="review-button__box">1</div>
+              </label>
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden></input>
+                <div class="review-button__box">2</div>
+              </label>
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden></input>
+                <div class="review-button__box">3</div>
+              </label>
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden></input>
+                <div class="review-button__box">4</div>
+              </label>
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden></input>
+                <div class="review-button__box">5</div>
+              </label>
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden></input>
+                <div class="review-button__box">6</div>
+              </label>
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden></input>
+                <div class="review-button__box">7</div>
+              </label>
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden></input>
+                <div class="review-button__box">8</div>
+              </label>
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden></input>
+                <div class="review-button__box">9</div>
+              </label>
+              <label class="review-button">
+                <input type="radio" name="review-button" hidden checked></input>
+                <div class="review-button__box">10</div>
+              </label>
+            </div>
+            <label data-id-static="comment" class="textarea">
+              <textarea placeholder="Добавить комментарий" rows="8" name="comment" data-id-static="comment"></textarea>
+              <p data-error="comment" class="textarea__error"></p>
+            </label>
+            <button class="button button--secondary button--centered">Оставить комментарий</button>
+          </form>
+        </div>
+      </div>
+      <div id="modal-complaint" class="modal">
+        <div class="modal-center modal-small">
+          <button class="modal-center__close" data-modal-close>
+            <svg class="icon">
+              <use href="/assets/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <form class="modal-complaint">
+            <h2>Отправка жалобы</h2>
+            <p>
+              Пожалуйста, сообщите нам причину, по которой страница
+              <a href="https://vklist.ru/user/uid204953257">https://vklist.ru/user/uid204953257</a>
+              должна быть проверена
+            </p>
+            <label>
+              <p class="modal-complaint__label-title">
+                Выберите причину жалобы: 
+                <span>*</span>
+              </p>
+              <div class="modal-complaint__drop" data-id="ui-dropdown" data-id-static="reason">
+                <input type="text" hidden data-value="backend" name="reason" data-id-static="reason"></input>
+                <div data-id="panel" class="modal-complaint__panel">
+                  <p data-id="text">-- Выберите причину --</p>
+                  <img src="/modules/modal-complaint/carret-down.png" alt=""></img>
+                </div>
+                <div class="modal-complaint__collapse">
+                  <ul class="modal-complaint__body">
+                    <li data-id="drop-item">Порнография</li>
+                    <li data-id="drop-item">Рассылка спама</li>
+                    <li data-id="drop-item">Оскорбительное поведение</li>
+                    <li data-id="drop-item">Рекламная страница</li>
+                    <li data-id="drop-item">Другое</li>
+                  </ul>
+                </div>
+              </div>
+              <p data-error="reason"></p>
+            </label>
+            <label data-id-static="mail">
+              <p class="modal-complaint__label-title">
+                E-mail: 
+                <span>*</span>
+              </p>
+              <input type="email" name="mail" placeholder="example@example.ru" data-id-static="mail"></input>
+              <p data-error="mail"></p>
+            </label>
+            <label data-id-static="comment">
+              <p class="modal-complaint__label-title">
+                Комментарий: 
+                <span>*</span>
+              </p>
+              <textarea rows="5" name="comment" placeholder="Опишите подробнее" data-id-static="comment"></textarea>
+              <p data-error="comment"></p>
+            </label>
+            <button class="button button--blue modal-complaint__button">Оставить жалобу</button>
+          </form>
+        </div>
+      </div>
+      <div id="success-review" class="modal">
+        <div class="modal-center">
+          <button class="modal-center__close" data-modal-close>
+            <svg class="icon">
+              <use href="/assets/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="success-message">
+            <h2>Благодарим за отзыв!</h2>
+            <p>Мы опубликуем его, как только он пройдет модерацию:)</p>
+          </div>
+        </div>
+      </div>
+      <div id="success-complaint" class="modal">
+        <div class="modal-center">
+          <button class="modal-center__close" data-modal-close>
+            <svg class="icon">
+              <use href="/assets/icons/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="success-message">
+            <h2>Ваша жалоба отправлена!</h2>
+            <p>Мы рассмотрим ваше обращение в течении двух дней.</p>
+          </div>
+        </div>
+      </div>
+      <script src="./js/main.js"></script>
+    </body>
+  </html>

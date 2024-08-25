@@ -1,0 +1,11 @@
+/**
+* Данный файл в момент компиляции получит все env переменные из файла: <root>/environment.js
+* Описание переменных с дефолтными значениями, для IDE
+*/
+
+$BASE_TEMPLATE_PATCH: '/assets' !default;
+
+$IS_DEV: null !default;
+$IS_PROD: null !default;
+$IS_WATCH: null !default;
+$CDN: null !default;

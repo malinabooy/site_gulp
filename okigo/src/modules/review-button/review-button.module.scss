@@ -1,0 +1,34 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.review-button {
+  cursor: pointer;
+
+  input:checked + .review-button__box {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+
+  input:hover + .review-button__box {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+
+  &__box {
+    @include mixins.Body-medium-30;
+    @include mixins.box-size(46px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--orange);
+    color: var(--orange);
+
+    transition: vars.$duration background-color vars.$timing, vars.$duration color vars.$timing;
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-regular-24;
+      @include mixins.box-size(40px);
+    }
+  }
+}

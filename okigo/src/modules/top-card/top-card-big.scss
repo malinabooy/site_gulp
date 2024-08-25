@@ -1,0 +1,124 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.top-card-big {
+  padding: 20px 30px;
+
+  @media (width < vars.$media-1280) {
+    padding: 20px 10px;
+  }
+
+  @media (width < vars.$media-768) {
+    padding: 10px;
+    padding: 0;
+  }
+
+  .top-card__index {
+    @media (width >= vars.$media-1440) {
+      @include mixins.Body-medium-30;
+    }
+  }
+
+  .top-card__img-wrap {
+    @media (width >= vars.$media-1024) {
+      width: 138px;
+      height: 191px;
+
+      img {
+        border-radius: 20px;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    @media (width < vars.$media-1024) {
+      width: 90px;
+      height: 120px;
+    }
+
+    @media (width < vars.$media-768) {
+      width: 70px;
+      height: 100px;
+      margin-right: 0;
+    }
+
+    @media (width < vars.$media-420) {
+      margin-right: 25px - 10px;
+      width: 50px;
+      height: 70px;
+    }
+  }
+
+  .top-card__info {
+    @include mixins.Body-light-16;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media (width < vars.$media-1024) {
+      gap: 8px;
+    }
+
+    @media (width < vars.$media-768) {
+      @include mixins.mobBody-light-9;
+      gap: 4px;
+    }
+
+    p {
+      max-width: 680px;
+    }
+  }
+
+  .top-card__title {
+    @include mixins.H1-medium;
+
+    @media (width < vars.$media-1024) {
+      @include mixins.H2-medium;
+    }
+
+    @media (width < vars.$media-768) {
+      margin-bottom: 0;
+      font-family: 'Geologica', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17.5px;
+    }
+  }
+
+  .top-card__date {
+    @media (width >= vars.$media-1024) {
+      width: 100px;
+
+      p:first-child {
+        @include mixins.H0-regular;
+
+        @media (width < vars.$media-768) {
+          @include mixins.Body-light-14;
+        }
+      }
+
+      p:last-child {
+        @include mixins.Body-regular-24;
+        display: block;
+
+        @media (width < vars.$media-768) {
+          @include mixins.Body-light-14;
+        }
+      }
+    }
+  }
+
+  .top-card__price {
+    flex-shrink: 0;
+    @media (width >= vars.$media-1024) {
+      @include mixins.Body-medium-30;
+    }
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-light-14;
+      margin-top: 4px;
+    }
+  }
+}

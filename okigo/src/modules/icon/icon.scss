@@ -1,0 +1,11 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+.icon {
+  flex-shrink: 0;
+}

@@ -1,0 +1,139 @@
+@mixin H0-regular {
+  font-family: 'Geologica', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+@mixin H1-medium {
+  font-family: 'Geologica', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin H2-medium {
+  font-family: 'Geologica', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+@mixin Body-medium-30 {
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 110%;
+}
+
+@mixin Body-regular-24 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31.2px;
+}
+
+@mixin Body-light-24 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 110%;
+}
+
+@mixin Body-light-20 {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+@mixin Body-regular-18 {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+@mixin Body-regular-14 {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+@mixin Body-light-16 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19.36px;
+}
+
+@mixin Body-black-12 {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 110%;
+}
+
+@mixin mobH0 {
+  font-family: 'Geologica', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+@mixin Body-black-18 {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 110%;
+}
+
+@mixin Body-black-24 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 110%;
+}
+
+@mixin mobH1 {
+  font-family: 'Geologica', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22.5px;
+}
+
+@mixin mobH2 {
+  font-family: 'Geologica', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.5px;
+}
+
+@mixin mobBody-medium-16 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin mobBody-light-12 {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+@mixin mobBody-light-9 {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  line-height: 10.89px;
+}
+
+@mixin Body-light-14 {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 110%;
+}

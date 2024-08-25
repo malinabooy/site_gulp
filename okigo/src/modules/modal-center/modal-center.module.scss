@@ -1,0 +1,53 @@
+@use '@/styles/vars/media';
+
+.modal-center {
+  margin: auto;
+  border-radius: 30px;
+  background: var(--white);
+  width: 768px;
+  height: max-content;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-10px);
+
+  transition: 200ms transform linear;
+
+  @media (width < media.$media-768) {
+    width: 100%;
+    min-height: 100%;
+    border-radius: unset;
+    padding: var(--container-gap);
+  }
+
+  &__close {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    color: var(--white);
+    cursor: pointer;
+    transition: 200ms color linear;
+
+    @media (width < media.$media-768) {
+      color: var(--black);
+      top: 20px;
+      right: var(--container-gap);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--red);
+      }
+    }
+
+    svg {
+      width: 35px;
+      height: 35px;
+
+      @media (width < media.$media-768) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

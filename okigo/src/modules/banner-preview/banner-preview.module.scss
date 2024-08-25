@@ -1,0 +1,193 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.banner-preview {
+  height: 100vh;
+  min-height: 772px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -203px; //header-size = 153px + mb = 50px
+  margin-bottom: 80px;
+
+  @media (width < vars.$media-1280) {
+    margin-top: 0;
+    height: calc(100vh - (207px - 25px));
+    min-height: 600px;
+    display: flex;
+  }
+
+  @media (width < vars.$media-768) {
+    height: calc(100vh - 132px);
+    min-height: 500px;
+    margin-bottom: 30px;
+  }
+
+  @media (width < vars.$media-420) {
+    height: calc(100vh - 132px);
+    min-height: 308px;
+    margin-top: 0;
+  }
+
+  &__container {
+    color: var(--white);
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @media (width < vars.$media-1280) {
+      align-items: flex-end;
+    }
+  }
+
+  &__wrap {
+    max-width: 440px;
+
+    @media (width < vars.$media-1280) {
+      margin-bottom: 56px;
+    }
+
+    @media (width < vars.$media-768) {
+      max-width: 100%;
+      display: grid;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__scores {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 27px;
+
+    @media (width < vars.$media-768) {
+      margin-bottom: 10px;
+      gap: 30px;
+    }
+
+    @media (width < vars.$media-420) {
+      margin-bottom: 2px;
+      gap: 11px;
+    }
+  }
+
+  &__score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-family: "Inter", sans-serif;
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 48.41px;
+
+      @media (width < vars.$media-768) {
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 26px;
+      }
+
+      @media (width < vars.$media-420) {
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 14.52px;
+      }
+    }
+
+    img {
+      @media (width < vars.$media-420) {
+        max-width: 40px;
+        max-height: 12px;
+      }
+    }
+  }
+
+  &__title {
+    @include mixins.H0-regular;
+    margin-bottom: 20px;
+    line-height: 60px;
+
+    @media (width < vars.$media-768) {
+      @include mixins.H1-medium;
+      max-width: 280px;
+      margin-bottom: 12px;
+    }
+
+    @media (width < vars.$media-420) {
+      @include mixins.H2-medium;
+      line-height: 30px;
+      max-width: 200px;
+    }
+  }
+
+  &__tags {
+    @include mixins.Body-light-16;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-light-14;
+      line-height: 120%;
+      margin-top: 16px;
+      gap: 20px;
+      order: 4;
+    }
+
+    @media (width < vars.$media-420) {
+      @include mixins.mobBody-light-9;
+    }
+  }
+
+  &__desc {
+    @include mixins.Body-light-16;
+    line-height: 150%;
+    margin-top: 15px;
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-light-14;
+      line-height: 120%;
+      order: 3;
+      margin-top: 0;
+    }
+
+    @media (width < vars.$media-420) {
+      @include mixins.mobBody-light-9;
+
+    }
+  }
+
+  &--three {
+    background-image: url("/assets/images/preview-banner-three.png");
+
+    @media (width < vars.$media-768) {
+      background-image: url("/assets/images/preview-banner-three-mobile.png");
+    }
+  }
+
+  &--concert {
+    background-image: url("/assets/images/concert-banner.png");
+
+    @media (width < vars.$media-768) {
+      background-image: url("/assets/images/concert-banner-media.png");
+    }
+  }
+
+  &--ex {
+    background-image: url("/assets/images/ex-banner.png");
+
+    @media (width < vars.$media-768) {
+      background-image: url("/assets/images/ex-banner-mobile.png");
+    }
+  }
+
+  &--perform {
+    background-image: url("/assets/images/perform-banner.png");
+
+    @media (width < vars.$media-768) {
+      background-image: url("/assets/images/perform-banner-mobile.png");
+    }
+  }
+}

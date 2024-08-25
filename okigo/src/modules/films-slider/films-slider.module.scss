@@ -1,0 +1,11 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.films-slider {
+  position: relative;
+  z-index: vars.$z-index-interactive;
+
+  &__footer {
+
+  }
+}

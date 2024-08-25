@@ -1,0 +1,126 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.user-menu {
+  &__tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--grid-gap);
+    margin-bottom: var(--grid-gap);
+
+    @media (width < vars.$media-768) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  &__tab {
+    @include mixins.H2-medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 57px;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    transition: vars.$duration background-color vars.$timing, vars.$duration color vars.$timing,
+      vars.$duration border-color vars.$timing;
+    cursor: pointer;
+
+    @media (width < vars.$media-1280) {
+      font-size: 20px;
+      height: 46px;
+    }
+
+    @media (width < vars.$media-768) {
+      @include mixins.mobH2;
+      height: 36px;
+      border-radius: 10px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: var(--blue);
+      }
+    }
+
+    &--active {
+      background-color: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: var(--grid-template);
+    gap: var(--grid-gap);
+    margin-bottom: 35px;
+
+    @media (width < vars.$media-768) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 124px;
+    border-radius: 20px;
+    padding: 20px 40px;
+    background-color: var(--light_grey);
+
+    @media (width < vars.$media-1280) {
+      gap: 60px;
+    }
+
+    @media (width < vars.$media-1024) {
+      padding: 20px;
+      border-radius: 15px;
+      gap: 30px;
+    }
+
+    @media (width < vars.$media-768) {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      @include mixins.H2-medium;
+      margin-bottom: 29px;
+
+      @media (width < vars.$media-1280) {
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
+
+      @media (width < vars.$media-768) {
+        @include mixins.mobH1;
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      @include mixins.Body-regular-24;
+
+      @media (width < vars.$media-1280) {
+        font-size: 18px;
+      }
+
+      @media (width < vars.$media-768) {
+        @include mixins.mobBody-light-12;
+        font-size: 14px;
+      }
+
+      @media (width < vars.$media-420) {
+        font-size: 12px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 21px;
+
+        @media (width < vars.$media-1280) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

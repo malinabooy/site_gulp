@@ -1,0 +1,48 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.modal-city {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--white);
+  padding: 28px var(--container-gap);
+
+  &__header {
+    font-family: "Geologica", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 21px;
+
+    svg {
+      @include mixins.box-size(24px);
+      cursor: pointer;
+
+      transition: vars.$duration color vars.$timing;
+
+      @media (width < vars.$media-420) {
+        @include mixins.box-size(15px);
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--red);
+        }
+      }
+    }
+  }
+
+  &__body {
+    @include mixins.Body-light-16;
+    max-height: calc(100vh - 125px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    @include mixins.scroll;
+  }
+}

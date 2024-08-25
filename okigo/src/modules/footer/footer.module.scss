@@ -1,0 +1,201 @@
+@use '@/styles/mixins/mixins.scss';
+@use '@/styles/vars/vars.scss';
+@use '@/styles/mixins/typ.scss';
+
+.footer {
+  height: 100%;
+  padding: 50px 0 56px 0;
+  background-color: var(--blue);
+
+  @media (width < vars.$media-768) {
+    padding-block: 40px;
+    padding-bottom: calc(var(--tap-bar-height, 0px) + 40px);
+  }
+
+  &__top-container {
+    @include mixins.Body-light-24;
+    display: grid;
+    grid-template-columns: var(--grid-template);
+    gap: var(--grid-gap);
+    color: var(--white);
+
+    @media (width < vars.$media-768) {
+      @include mixins.Body-light-16;
+    }
+
+    @media (width < vars.$media-420) {
+      @include mixins.mobBody-light-12;
+    }
+  }
+
+  &__top-logo {
+    color: var(--white) !important;
+    grid-column: span 5;
+
+    @media (width < vars.$media-1920) {
+      grid-column: span 4;
+    }
+
+    @media (width < vars.$media-768) {
+      display: none;
+    }
+  }
+
+  &__top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    grid-column: span 7;
+
+    @media (width < vars.$media-1920) {
+      grid-column: span 8;
+    }
+
+
+    @media (width < vars.$media-768) {
+      grid-column: -1 /1;
+      margin-top: 0;
+      gap: 8px;
+    }
+  }
+
+  &__top-link {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 10px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 49px;
+    cursor: pointer;
+    transition: vars.$duration border-color vars.$timing;
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: var(--white);
+      }
+    }
+
+    &:active {
+      border-color: var(--white);
+    }
+
+    @media (width < vars.$media-1280) {
+      padding: 6px;
+      border-radius: 10px;
+    }
+
+    @media (width < vars.$media-768) {
+      height: 23px;
+    }
+  }
+
+  &__separator {
+    margin: 39px 0 25px;
+    height: 0.5px;
+    background-color: #FFFFFFA6;
+
+    @media (width < vars.$media-768) {
+      margin: 30px 0;
+    }
+  }
+
+  &__bottom-container {
+    @include mixins.Body-light-14;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: rgba(255, 255, 255, 0.6);
+
+    @media (width < vars.$media-768) {
+      @include mixins.mobBody-light-12;
+
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__bottom-logo {
+    @media (width >= vars.$media-768) {
+      display: none !important;
+    }
+  }
+
+  &__bottom-copyright {
+
+  }
+
+  &__bottom-nav {
+    display: flex;
+    gap: 50px;
+
+    @media (width < vars.$media-768) {
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media (width < vars.$media-420) {
+      gap: 10px;
+    }
+
+  }
+
+  &__bottom-link {
+    cursor: pointer;
+    transition: vars.$duration color vars.$timing;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__bottom-social {
+    display: flex;
+    gap: 20px;
+
+    @media (width < vars.$media-420) {
+      margin-top: 10px;
+    }
+  }
+
+  &__media {
+    @include mixins.box-size(30px);
+
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    cursor: pointer;
+    transition: vars.$duration color vars.$timing,
+    vars.$duration background-color vars.$timing;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #0077FF;
+        color: var(--white);
+      }
+    }
+
+    &:active {
+      background-color: #0077FF;
+      color: var(--white);
+    }
+
+    svg {
+      @include mixins.box-size(18px);
+    }
+  }
+
+  li {
+    list-style-type: none;
+  }
+}

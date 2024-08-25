@@ -1,0 +1,70 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.concert-info {
+  @include mixins.Body-light-16;
+
+  @media (width < vars.$media-768) {
+  @include mixins.mobBody-light-12;
+  }
+
+  &__gallery {
+    margin-bottom: 80px;
+
+    @media (width < vars.$media-768) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 50px;
+
+    @media (width < vars.$media-768) {
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      @include mixins.H1-medium;
+      margin-bottom: 30px;
+
+      @media (width < vars.$media-768) {
+        @include mixins.mobH0;
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media (width < vars.$media-768) {
+      gap: 7px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 140px;
+
+    @media (width < vars.$media-768) {
+      gap: 4px;
+    }
+
+    p:first-child {
+      color: #30303080;
+      width: 100px;
+
+      @media (width < vars.$media-768) {
+        width: 80px;
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.auth-profile {
+  position: relative;
+  height: max-content;
+  cursor: pointer;
+  padding: 5px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  transition: vars.$duration border-color vars.$timing, vars.$duration background-color vars.$timing,
+    vars.$duration color vars.$timing;
+
+  @media (width < vars.$media-768) {
+    padding: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: var(--blue);
+
+      @media (width < vars.$media-1280) {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-regular-18;
+      color: var(--white);
+    }
+
+    @media (width < vars.$media-768) {
+      @include mixins.mobH2;
+    }
+
+    p {
+      transition: vars.$duration color vars.$timing;
+      @media (width >= vars.$media-1280) {
+        display: none;
+      }
+    }
+
+    img {
+      @include mixins.box-size(40px);
+      border-radius: 50%;
+      object-fit: cover;
+
+      @media (width < vars.$media-768) {
+        @include mixins.box-size(30px);
+      }
+
+      @media (width < vars.$media-420) {
+        @include mixins.box-size(20px);
+      }
+    }
+
+    &--blue {
+      color: var(--black);
+    }
+  }
+
+  &__body {
+    @include mixins.dropdown-body;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    z-index: vars.$z-index-interactive + vars.$z-index-interactive;
+
+    @media (width < vars.$media-768) {
+      top: calc(100% + 24px);
+      padding-top: 0;
+      padding-inline: var(--container-gap);
+      box-shadow: 0 11px 11px 0 rgba(0, 0, 0, 0.2);
+      width: 100vw;
+      right: -17px;
+      border-radius: 0 0 20px 20px;
+      gap: 15px;
+    }
+  }
+
+  &__name {
+    @include mixins.mobH1;
+    text-align: center;
+
+    @media (width < vars.$media-1280) {
+      display: none;
+    }
+  }
+
+  &__item {
+    @include mixins.Body-light-16;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: vars.$duration color vars.$timing;
+
+    @media (width < vars.$media-420) {
+      @include mixins.Body-light-14;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--blue);
+      }
+    }
+
+    svg {
+      @include mixins.box-size(22px);
+
+      @media (width < vars.$media-420) {
+        @include mixins.box-size(15px);
+      }
+    }
+  }
+
+  &__count {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    flex-shrink: 0;
+    height: 22px;
+    padding: 2.5px 7px 2.5px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    background-color: var(--blue);
+    color: var(--white);
+
+    @media (width < vars.$media-420) {
+      font-size: 12px;
+      line-height: 14.52px;
+      padding: 1.5px 6px;
+    }
+  }
+
+  &[active] {
+    border-color: var(--blue);
+
+    @media (width < vars.$media-1280) {
+      border-color: transparent;
+    }
+
+    .auth-profile__body {
+      opacity: 1;
+      pointer-events: unset;
+    }
+  }
+}

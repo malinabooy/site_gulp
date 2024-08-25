@@ -1,0 +1,68 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.rating-card-small {
+
+  .rating-card__subscribers {
+    @media (width >= vars.$media-768) {
+      @include mixins.Body-light-14;
+      padding: 7px 10px;
+    }
+
+
+    @media (width < vars.$media-768) {
+      font-family: "Inter", sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+      line-height: 10.89px;
+    }
+  }
+
+  .rating-card__statistics {
+
+    @media (width >= vars.$media-768) {
+      @include mixins.Body-light-14;
+      gap: 6px;
+
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    @media (width < vars.$media-768) {
+      font-family: "Inter", sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+      line-height: 10.89px;
+    }
+  }
+
+  .rating-card__avatar {
+    @media (width < vars.$media-768) {
+      width: 65px;
+      height: 70px;
+    }
+  }
+
+  .rating-card__subs-stats {
+
+    @media (width < vars.$media-1280) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 13px;
+    }
+
+    @media (width < vars.$media-768) {
+      gap: 10px;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .rating-card__flex-wrap {
+    @media (width < vars.$media-768) {
+      gap: 10px;
+    }
+  }
+}

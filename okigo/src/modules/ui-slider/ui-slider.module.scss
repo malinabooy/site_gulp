@@ -1,0 +1,113 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.ui-slider {
+  .swiper {
+    @include mixins.swiper-margin;
+  }
+}
+
+.ui-slider-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-end;
+  margin-bottom: 46px;
+
+  @media (width < vars.$media-1280) {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    margin-bottom: 0 !important;
+  }
+
+  &__button-media {
+    display: none;
+
+    @media (width < vars.$media-768) {
+      display: flex !important;
+      width: 62px !important;
+      height: 26px;
+    }
+  }
+}
+
+.ui-slider-footer {
+  margin-top: 31px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (width < vars.$media-768) {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  &__button-desk {
+    width: 129px !important;
+    height: 45px;
+
+    @media (width < vars.$media-768) {
+      display: none !important;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media (width < vars.$media-768) {
+      gap: 6px;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: var(--grey_2);
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--blue);
+    }
+
+    &--white {
+      .swiper-pagination-bullet {
+        background-color: var(--grey_1);
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: var(--white);
+      }
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+
+      transition: vars.$duration width vars.$timing, vars.$duration height vars.$timing;
+
+      @media (width < vars.$media-768) {
+        width: 5.77px;
+        height: 5.77px;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 15px;
+      height: 15px;
+
+      @media (width < vars.$media-768) {
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+
+  &__arrows {
+    @media (width < vars.$media-768) {
+      display: none;
+    }
+  }
+}

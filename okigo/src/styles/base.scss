@@ -1,0 +1,76 @@
+@use '@/styles/vars/media.scss';
+
+* {
+  //outline: 1px solid green;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html:not(.transition) {
+  * {
+    transition-duration: 0ms !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 80px;
+
+  @media (width < media.$media-1280) {
+    scroll-margin-top: 60px;
+  }
+}
+
+body {
+}
+
+.swiper-wrapper {
+  height: auto;
+}
+
+img,
+picture {
+  overflow: hidden;
+}
+
+[hidden] {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input::-webkit-search-cancel-button {
+  display: none;
+  appearance: none;
+}
+
+input:focus::-webkit-textfield-decoration-container {
+  position: initial!important;
+  right: unset!important;
+}
+
+.section-mb {
+  margin-bottom: 100px;
+
+  @media (width < media.$media-768) {
+    margin-bottom: 40px;
+  }
+}
+
+[data-id='show-more'] {
+  width: 380px!important;
+  height: 55px;
+  margin-top: 20px;
+
+  @media (width < media.$media-768) {
+    width: 100%!important;
+    height: 31px;
+    margin-top: 0;
+  }
+}

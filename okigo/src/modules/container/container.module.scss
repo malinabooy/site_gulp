@@ -1,0 +1,25 @@
+@use '@/styles/vars/media';
+
+:root {
+  --container-width: 1600px;
+  --container-gap: 30px;
+
+  @media (width < media.$media-1920) {
+    --container-gap: 20px;
+    --container-width: 1200px;
+  }
+  @media (width < media.$media-768) {
+    --container-gap: 15px;
+  }
+}
+
+.container {
+  max-width: calc(
+    var(--container-width) + var(--container-gap) + var(--container-gap)
+  );
+  padding-left: var(--container-gap);
+  padding-right: var(--container-gap);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}

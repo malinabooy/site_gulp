@@ -1,0 +1,17 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+
+  h2 {
+    @include mixins.H1-medium;
+  }
+
+  p {
+    @include mixins.Body-regular-18;
+  }
+}

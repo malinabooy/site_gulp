@@ -1,0 +1,32 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.header-banner {
+  .header__link {
+    color: var(--white);
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: var(--white);
+      }
+    }
+
+    &:active {
+      border-color: var(--white);
+    }
+
+    @media (width < vars.$media-1280) {
+      color: var(--black);
+
+      @media (hover: hover) {
+        &:hover {
+          border-color: var(--blue);
+        }
+      }
+
+      &:active {
+        border-color: var(--blue);
+      }
+    }
+  }
+}

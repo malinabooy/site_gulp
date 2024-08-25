@@ -1,0 +1,12 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.gray-back {
+  background-color: #F9F9FF;
+  padding-bottom: 56px;
+
+  @media (width < vars.$media-1280) {
+    background-color: var(--white);
+    padding: 0;
+  }
+}

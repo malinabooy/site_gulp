@@ -1,0 +1,100 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.reviews-slider {
+  margin-bottom: 100px;
+  overflow: hidden;
+
+  @media (width < vars.$media-768) {
+    margin-bottom: 40px;
+  }
+
+  .swiper {
+    margin-inline: -20vw;
+    padding-inline: 20vw;
+
+    @media (width < 1500px) {
+      margin-inline: -8vw;
+      padding-inline: 8vw;
+    }
+
+    @media (width < vars.$media-1280) {
+      margin-inline: calc(var(--container-gap) * -1);
+      padding-inline: var(--container-gap);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @media (width < vars.$media-768) {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      @include mixins.H1-medium;
+
+      @media (width < vars.$media-768) {
+        @include mixins.H2-medium;
+      }
+    }
+  }
+
+  &__arrows {
+    @media (width < vars.$media-768) {
+      display: none !important;
+    }
+  }
+
+  &__footer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    @media (width < vars.$media-768) {
+      margin-top: 20px;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+
+  &__pagination {
+    align-items: center;
+    gap: 10px;
+    display: none;
+
+    @media (width < vars.$media-768) {
+      gap: 6px;
+      display: flex;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: var(--grey_2);
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--blue);
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    transition: vars.$duration transform vars.$timing;
+
+    @media (width < vars.$media-768) {
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    transform: scale(1.5);
+  }
+
+}

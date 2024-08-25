@@ -1,0 +1,82 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.lk-entry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 9px 20px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  transition: vars.$duration border-color vars.$timing, vars.$duration background-color vars.$timing,
+    vars.$duration color vars.$timing;
+
+  @media (width < vars.$media-1280) {
+    font-family: 'Geologica', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.5px;
+  }
+
+  @media (width < vars.$media-768) {
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: var(--blue);
+    }
+  }
+
+  &:active {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  &__img-wrap {
+    @include mixins.box-size(28px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--orange);
+
+    @media (width < vars.$media-768) {
+      border-radius: 50%;
+    }
+
+    @media (width < vars.$media-420) {
+      @include mixins.box-size(20px);
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      @media (width < vars.$media-420) {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  img {
+    flex-shrink: 0;
+
+    @media (width < vars.$media-1280) {
+      border-radius: 50%;
+    }
+  }
+
+  &--white {
+    color: var(--white);
+
+    @media (hover: hover) {
+      &:hover {
+        border-color: var(--white);
+      }
+    }
+  }
+}

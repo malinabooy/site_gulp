@@ -1,0 +1,96 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.audit {
+  margin-bottom: 100px;
+
+  @media (width < vars.$media-768) {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+
+    @include mixins.H1-medium;
+    margin-bottom: 50px;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.H1-medium;
+    }
+
+    @media (width < vars.$media-768) {
+      @include mixins.H2-medium;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__second-block {
+    display: flex;
+    align-items: center;
+    gap: 137px;
+
+    @media (width < vars.$media-1280) {
+      justify-content: center;
+      gap: 70px;
+    }
+
+    @media (width < vars.$media-1024) {
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    @media (width < vars.$media-420) {
+      display: block;
+    }
+  }
+
+  &__links-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (width < vars.$media-768) {
+      grid-template-columns: 1fr;
+      row-gap: 35px;
+    }
+  }
+  &__links-contacts {
+    @media (width < vars.$media-768) {
+      text-align: center;
+    }
+  }
+
+  &__links-mediakit {
+    @media (width < vars.$media-768) {
+      order: -1;
+      text-align: center;
+    }
+  }
+
+  &__links-item {
+    margin-top: 50px;
+    @include mixins.Body-regular-24;
+
+    @media (width < vars.$media-768) {
+      margin-top: 20px;
+      text-align: center;
+
+      @include mixins.Body-regular-18;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: var(--blue);
+
+      cursor: pointer;
+      transition: vars.$duration text-decoration vars.$timing;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+}

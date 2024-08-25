@@ -1,0 +1,30 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+body:has(.modal-open) {
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal {
+  opacity: 0;
+  position: fixed;
+  z-index: vars.$z-index-modal;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: 200ms opacity ease-in-out;
+
+  &--open {
+    opacity: 1;
+    pointer-events: auto;
+
+    & > * {
+      transform: translate(0)!important;
+    }
+  }
+
+}

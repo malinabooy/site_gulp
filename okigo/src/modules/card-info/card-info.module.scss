@@ -1,0 +1,33 @@
+@use '@/styles/mixins/typ.scss';
+
+.card-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+  &__title {
+    @include typ.H2-medium;
+    color: var(--white);
+    margin-bottom: 15px;
+  }
+
+  &__date {
+    @include typ.Body-light-16;
+    color: var(--white);
+  }
+
+  &--big {
+    .card-info__title {
+      @include typ.H1-medium;
+      color: var(--white);
+      margin-bottom: 15px;
+      width: 670px;
+    }
+
+    .card-info__date {
+      @include typ.Body-light-16;
+      color: var(--white);
+      line-height: 150%;
+    }
+  }
+}
